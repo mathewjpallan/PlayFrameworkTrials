@@ -20,11 +20,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <play2.version>2.5.19</play2.version>
+        <play2.version>2.7.3</play2.version>
         <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
-        <play.scala.version>2.11</play.scala.version>
-        <scala.version>2.11.0</scala.version>
+        <play.scala.version>2.13</play.scala.version>
+        <scala.version>2.13.0</scala.version>
     </properties>
 
     <dependencies>
@@ -35,7 +35,18 @@
         </dependency>
         <dependency>
             <groupId>com.typesafe.play</groupId>
+            <artifactId>play-guice_${play.scala.version}</artifactId>
+            <version>${play2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
             <artifactId>play-logback_${play.scala.version}</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-akka-http-server_${play.scala.version}</artifactId>
             <version>${play2.version}</version>
             <scope>runtime</scope>
         </dependency>
