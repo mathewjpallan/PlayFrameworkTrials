@@ -24,10 +24,15 @@
         <play2.plugin.version>1.0.0-rc5</play2.plugin.version>
         <sbt-compiler.plugin.version>1.0.0</sbt-compiler.plugin.version>
         <play.scala.version>2.11</play.scala.version>
-        <scala.version>2.11.0</scala.version>
+        <scala.version>2.11.7</scala.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.typesafe.play</groupId>
             <artifactId>play_${play.scala.version}</artifactId>
@@ -39,6 +44,13 @@
             <version>${play2.version}</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-netty-server_${play.scala.version}</artifactId>
+            <version>${play2.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <sourceDirectory>${basedir}/app</sourceDirectory>
