@@ -46,9 +46,14 @@
         </dependency>
         <dependency>
             <groupId>com.typesafe.play</groupId>
-            <artifactId>play-akka-http-server_${play.scala.version}</artifactId>
+            <artifactId>play-netty-server_${play.scala.version}</artifactId>
             <version>${play2.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>1.7.5</version>
         </dependency>
     </dependencies>
     <build>
