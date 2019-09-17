@@ -5,3 +5,4 @@
 GET /test                           controllers.TestController.testApi()
 GET /getData                        controllers.TestController.getData()
 GET /getDataAsync                   controllers.TestController.getDataAsync()
+GET /getDataAkka                    controllers.TestController.getDataAkka()
