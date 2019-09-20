@@ -1,0 +1,11 @@
+{
+     "request": {
+        "content": {
+             "name": "resource12",
+             "code": "test.lp.content.100",
+             "mimeType": "application/pdf",
+             "contentType": "Resource",
+             "body": "body string"
+         }
+     }
+}

@@ -2,7 +2,10 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET /test                           controllers.TestController.testApi()
+GET /test                           controllers.TestController.test()
 GET /getData                        controllers.TestController.getData()
 GET /getDataAsync                   controllers.TestController.getDataAsync()
-GET /getDataAkka                    controllers.TestController.getDataAkka()
+GET /getDataAsync2                   controllers.TestController.getDataAsync2()
+GET /getDataAkka                    controllers.TestAkkaController.getDataAkka()
+GET /getDataAkkaAsync               controllers.TestAkkaController.getDataAkkaAsync()
+GET /getDataAkkaAsync2               controllers.TestAkkaController.getDataAkkaAsync2()

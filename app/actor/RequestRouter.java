@@ -21,7 +21,7 @@ public class RequestRouter extends AbstractActor {
 
     public RequestRouter() {
         List<Routee> routees = new ArrayList<Routee>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             ActorRef r = getContext().actorOf(Props.create(GraphEngine.class));
             getContext().watch(r);
             routees.add(new ActorRefRoutee(r));

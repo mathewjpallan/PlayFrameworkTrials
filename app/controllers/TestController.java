@@ -23,7 +23,7 @@ public class TestController extends Controller {
         Middleware.init();
     }
 
-    public Result testApi() {
+    public Result test() {
         return ok("works");
     }
 
@@ -36,9 +36,11 @@ public class TestController extends Controller {
         return data.thenApply(output -> ok(output));
     }
 
-    public Result getDataAkka() throws Exception {
-        Future<Object> future = Middleware.getGraphData();
-        return ok((String)Await.result(future, Timeout.create(Duration.ofSeconds(5)).duration()));
+    public CompletionStage<Result> getDataAsync2() {
+        CompletionStage<String> output = GraphAPI.getDataFromNeo4jAsync().thenCompose(
+                out -> GraphAPI.getDataFromNeo4jAsync()
+        );
+        return output.thenApply(data -> ok(data));
     }
 }
 
